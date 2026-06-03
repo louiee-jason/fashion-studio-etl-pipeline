@@ -13,13 +13,13 @@ def test_scrape_main(mock_session_class):
     # Simulate HTML response
     mock_response.text = """
     <html><body>
-        <div class="product-card">
-            <h3 class="title">T-Shirt Men</h3>
-            <div class="price">$15.50</div>
-            <div class="rating">4.8 / 5</div>
-            <div class="color">3 Colors</div>
-            <div class="size">Size: M</div>
-            <div class="gender">Gender: Men</div>
+        <div class="collection-card">
+            <h3 class="product-title">T-Shirt Men</h3>
+            <span class="price">$15.50</span>
+            <p>Rating: 4.8 / 5</p>
+            <p>3 Colors</p>
+            <p>Size: M</p>
+            <p>Gender: Men</p>
         </div>
     </body></html>
     """

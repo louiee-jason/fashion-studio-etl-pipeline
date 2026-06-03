@@ -11,7 +11,7 @@ def scrape_main(base_url="https://fashion-studio.dicoding.dev", total_pages=50):
     session = requests.Session()
     
     for page in range(1, total_pages + 1):
-        url = f"{base_url}/?page={page}"
+        url = base_url if page == 1 else f"{base_url}/page{page}"
         try:
             response = session.get(url, timeout=10)
             response.raise_for_status()

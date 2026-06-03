@@ -57,7 +57,7 @@ def clean_gender(gender_str):
 
 def transform_data(df):
     try:
-        df = df.drop_duplicates()
+        df = df.drop_duplicates(subset=['Title', 'Price', 'Rating', 'Colors', 'Size', 'Gender'])
         
         df = df[df['Title'].notna()]
         df = df[df['Title'] != 'Unknown Product']
